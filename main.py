@@ -55,7 +55,7 @@ def algoritimo_luhn(number):
         checksum = checksum+int(x)
     
     # retorna true se a variavel checksum é mod de 10 e falso para o contrário.
-    return int(custom_split(str(checksum))[1]) % 10 == 0
+    return ((checksum % 10) == 0)
 
 cartao_test = 5090697854632091
 print("[LOG] {cartao} é valido? (true/false): {result}".format(cartao=cartao_test, result=algoritimo_luhn(cartao_test)))
